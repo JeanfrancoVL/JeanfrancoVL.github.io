@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeanfranco Velasquez | Diseñador Gráfico & UX/UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Placeholders temporales */
+        .image-placeholder,
+        .video-placeholder,
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(131, 56, 236, 0.1));
+            border: 2px dashed rgba(0, 245, 255, 0.3);
+            border-radius: 20px;
+            gap: 1rem;
+        }
+        
+        .image-placeholder.square,
+        .video-placeholder,
+        .gallery-placeholder {
+            aspect-ratio: 16/9;
+            min-height: auto;
+        }
+        
+        .image-placeholder p,
+        .video-placeholder p,
+        .gallery-placeholder p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .gallery-placeholder {
+            min-height: 350px;
+        }
+        
+        .gallery-placeholder span {
+            font-size: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Partículas de fondo -->
+    <div id="particles"></div>
+    
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                JV
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#habilidades" class="nav-link">Skills</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span class="glowing-dot"></span>
+                    Disponible para freelance
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-small">Hola, soy</span>
+                    <span class="title-main">Jeanfranco</span>
+                    <span class="title-gradient">Velasquez</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Diseñador Gráfico & UX/UI de 19 años con <span class="highlight">mentalidad ganadora</span>. 
+                    Creando experiencias visuales que impactan y convierten.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Años</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="200">0</div>
+                        <div class="stat-label">Proyectos</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="90">0</div>
+                        <div class="stat-label">% Aprobación</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <span>Ver Proyectos</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <span>Contactar</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">🎨</div>
+                    <div class="card-text">Figma Expert</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">✨</div>
+                    <div class="card-text">Adobe Suite</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">🏆</div>
+                    <div class="card-text">Ganador Nacional</div>
+                </div>
+                <div class="floating-card card-4">
+                    <div class="card-icon">🚀</div>
+                    <div class="card-text">UX/UI Design</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ SECTION -->
+    <section class="about" id="sobre-mi">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">
+                    <span class="title-line">Conoce más</span>
+                    <span class="title-main">Sobre mí</span>
+                </h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image">
+                        <!-- Placeholder con gradiente hasta que agregues tu foto -->
+                        <div class="image-placeholder">
+                            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="70" r="35" fill="url(#gradient1)"/>
+                                <path d="M50 150C50 125 70 110 100 110C130 110 150 125 150 150V160H50V150Z" fill="url(#gradient1)"/>
+                                <defs>
+                                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#00F5FF"/>
+                                        <stop offset="100%" style="stop-color:#8338EC"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="image-frame"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <div class="badge-number">3+</div>
+                        <div class="badge-text">Años de<br>Experiencia</div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">
+                            Soy un diseñador de <strong>19 años</strong> con una mentalidad ganadora demostrada. 
+                            Ganador del <strong>primer lugar nacional</strong> en Hack4Future SENATIC con 90%+ de aprobación del jurado.
+                        </p>
+                        
+                        <p>
+                            Me especializo en crear <strong>experiencias visuales impactantes</strong> para infoproductos, 
+                            material educativo y lanzamientos digitales. Con más de <strong>200 proyectos exitosos</strong>, 
+                            combino creatividad con estrategia para generar resultados reales.
+                        </p>
+                        
+                        <p>
+                            🚀 <strong>Apasionado</strong> por los retos creativos, <strong>ágil</strong> en la ejecución y con 
+                            un hambre insaciable de aprender y crecer. Cada proyecto es una oportunidad para superar expectativas.
+                        </p>
+                    </div>
+                    
+                    <div class="skills-quick">
+                        <div class="skill-item">
+                            <span class="skill-icon">✦</span>
+                            <span>Diseño UX/UI</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">✦</span>
+                            <span>Branding</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">✦</span>
+                            <span>Motion Graphics</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">✦</span>
+                            <span>Social Media</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="btn btn-outline">
+                        <span>Trabajemos juntos</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS SECTION -->
+    <section class="projects" id="proyectos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">
+                    <span class="title-line">Trabajos recientes</span>
+                    <span class="title-main">Proyectos Destacados</span>
+                </h2>
+            </div>
+            
+            <!-- Proyecto 1: Hack4Future -->
+            <div class="project-card featured">
+                <div class="project-number">01</div>
+                <div class="project-badge">🏆 Ganador Nacional</div>
+                
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Ciudad Firewall</h3>
+                        <p class="project-subtitle">Plataforma Educativa de Ciberseguridad</p>
+                        <p class="project-description">
+                            Diseño UX/UI completo de plataforma educativa gamificada para prevención de fraudes digitales. 
+                            Primer lugar nacional en Hack4Future SENATIC con <strong>90%+ de aprobación</strong> del jurado 
+                            por innovación, usabilidad y impacto social.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UX/UI</span>
+                            <span>Wireframing</span>
+                            <span>Prototipado</span>
+                            <span>Gamificación</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                Ver Proyecto
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 10L10 6M10 6H6M10 6V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="media-wrapper">
+                            <!-- Placeholder hasta que agregues el video -->
+                            <div class="video-placeholder">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="30" stroke="url(#grad2)" stroke-width="2"/>
+                                    <path d="M32 28L52 40L32 52V28Z" fill="url(#grad2)"/>
+                                    <defs>
+                                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#00F5FF"/>
+                                            <stop offset="100%" style="stop-color:#FF006E"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <p>Video del proyecto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div class="project-number">02</div>
+                
+                <div class="project-content reverse">
+                    <div class="project-info">
+                        <h3 class="project-title">Campaña Digital</h3>
+                        <p class="project-subtitle">Diseño de Redes Sociales</p>
+                        <p class="project-description">
+                            Más de 200 piezas gráficas de alto impacto para redes sociales. Diseño de identidad visual 
+                            completa y branding consistente que generó incremento medible en engagement.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span>Photoshop</span>
+                            <span>Canva Pro</span>
+                            <span>Branding</span>
+                            <span>Social Media</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                Ver Galería
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 10L10 6M10 6H6M10 6V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="media-wrapper">
+                            <div class="image-placeholder square">
+                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                    <rect width="100" height="100" fill="url(#grad3)" opacity="0.2"/>
+                                    <path d="M30 40L50 25L70 40V70L50 85L30 70V40Z" stroke="url(#grad3)" stroke-width="2"/>
+                                    <defs>
+                                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#FF006E"/>
+                                            <stop offset="100%" style="stop-color:#8338EC"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <p>Diseños sociales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div class="project-number">03</div>
+                
+                <div class="project-content">
+                    <div class="project-info">
+                        <h3 class="project-title">Plataforma Editorial</h3>
+                        <p class="project-subtitle">Desarrollo Web & UX/UI</p>
+                        <p class="project-description">
+                            Liderazgo de proyecto web editorial durante un año. Reconocido como mejor proyecto institucional 
+                            y presentado en pitch municipal con excelente recepción.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span>HTML/CSS/JS</span>
+                            <span>UX/UI</span>
+                            <span>Responsive</span>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                Ver Proyecto
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M6 10L10 6M10 6H6M10 6V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-media">
+                        <div class="media-wrapper">
+                            <div class="image-placeholder square">
+                                <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                    <rect width="100" height="100" fill="url(#grad4)" opacity="0.2"/>
+                                    <rect x="20" y="15" width="60" height="70" rx="4" stroke="url(#grad4)" stroke-width="2"/>
+                                    <line x1="30" y1="30" x2="70" y2="30" stroke="url(#grad4)" stroke-width="2"/>
+                                    <line x1="30" y1="45" x2="70" y2="45" stroke="url(#grad4)" stroke-width="2"/>
+                                    <line x1="30" y1="60" x2="60" y2="60" stroke="url(#grad4)" stroke-width="2"/>
+                                    <defs>
+                                        <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#00F5FF"/>
+                                            <stop offset="100%" style="stop-color:#3A86FF"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <p>Plataforma web</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES SECTION -->
+    <section class="skills" id="habilidades">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">
+                    <span class="title-line">Mis superpoderes</span>
+                    <span class="title-main">Habilidades</span>
+                </h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <div class="skill-icon">🎨</div>
+                    </div>
+                    <h3>Diseño UX/UI</h3>
+                    <p>Figma, Wireframing, Prototipado, Sistemas de diseño, Research</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="95"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <div class="skill-icon">✨</div>
+                    </div>
+                    <h3>Diseño Gráfico</h3>
+                    <p>Adobe Photoshop, Lightroom, Canva Pro, Illustrator</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="90"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <div class="skill-icon">🎬</div>
+                    </div>
+                    <h3>Motion & Video</h3>
+                    <p>DaVinci Resolve, Motion Graphics, Edición de video</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="85"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <div class="skill-icon">💻</div>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>HTML, CSS, JavaScript, Responsive Design</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="80"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <div class="skill-icon">📱</div>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p>Estrategia, Community Management, Content Creation</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="95"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon-wrapper">
+                        <div class="skill-icon">🎯</div>
+                    </div>
+                    <h3>Branding</h3>
+                    <p>Identidad visual, Guidelines, Material educativo</p>
+                    <div class="skill-level">
+                        <div class="skill-bar" data-width="90"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">
+                    <span class="title-line">Más trabajos</span>
+                    <span class="title-main">Galería</span>
+                </h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Placeholders hasta que agregues tus imágenes -->
+                <div class="gallery-item" data-category="branding">
+                    <div class="gallery-placeholder">
+                        <span>🎨</span>
+                        <p>Branding Project</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Branding</span>
+                        <h4>Proyecto de marca</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ui">
+                    <div class="gallery-placeholder">
+                        <span>📱</span>
+                        <p>UI Design</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">UI Design</span>
+                        <h4>Diseño de interfaz</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="social">
+                    <div class="gallery-placeholder">
+                        <span>📸</span>
+                        <p>Social Media</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Social Media</span>
+                        <h4>Contenido social</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="branding">
+                    <div class="gallery-placeholder">
+                        <span>✨</span>
+                        <p>Brand Identity</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Branding</span>
+                        <h4>Identidad corporativa</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="ui">
+                    <div class="gallery-placeholder">
+                        <span>💻</span>
+                        <p>Web Design</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">UI Design</span>
+                        <h4>Diseño web</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="social">
+                    <div class="gallery-placeholder">
+                        <span>🎥</span>
+                        <p>Video Content</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Social Media</span>
+                        <h4>Contenido video</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">
+                    <span class="title-line">¿Listo para crear algo increíble?</span>
+                    <span class="title-main">Hablemos</span>
+                </h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <a href="mailto:jeanvelaslarez@gmail.com">jeanvelaslarez@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <a href="tel:+573104788919">+57 310 478 8919</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h4>Ubicación</h4>
+                            <p>Medellín, Colombia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/jeanfrancovl" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://behance.net/jeanfrancovl" target="_blank" class="social-link">Behance</a>
+                        <a href="https://instagram.com/jeanfrancovl" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://github.com/JeanfrancoVL" target="_blank" class="social-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <div class="cta-content">
+                        <h3>¿Tienes un proyecto en mente?</h3>
+                        <p>Estoy disponible para proyectos freelance, colaboraciones y oportunidades full-time.</p>
+                        
+                        <div class="cta-buttons">
+                            <a href="mailto:jeanvelaslarez@gmail.com" class="btn btn-primary btn-large">
+                                <span>Enviar Email</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="#proyectos" class="btn btn-outline btn-large">
+                                <span>Ver Portfolio</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Jeanfranco Velasquez. Todos los derechos reservados.</p>
+                <p class="footer-note">Diseñado y desarrollado con <span class="heart">♥</span> y mucho café</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
