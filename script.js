@@ -419,3 +419,47 @@ window.addEventListener('scroll', () => {
 
 // Inicialización completa
 console.log('✅ Portfolio inicializado correctamente');
+
+// ==============================================
+// YOUTUBE VIDEO PLAYER
+// ==============================================
+document.querySelectorAll('.video-container').forEach(container => {
+    const placeholder = container.querySelector('.video-placeholder');
+    const iframe = container.querySelector('.youtube-iframe');
+    const playBtn = container.querySelector('.play-video-btn');
+    
+    if (playBtn && iframe && placeholder) {
+        playBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            // Cargar video de YouTube
+            iframe.src = iframe.dataset.src;
+            
+            // Ocultar placeholder con animación
+            placeholder.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            placeholder.style.opacity = '0';
+            placeholder.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                placeholder.classList.add('hidden');
+                placeholder.classList.remove('active');
+                
+                // Mostrar iframe con animación
+                iframe.style.display = 'block';
+                iframe.style.opacity = '0';
+                iframe.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    iframe.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    iframe.style.opacity = '1';
+                    iframe.style.transform = 'scale(1)';
+                }, 10);
+            }, 500);
+        });
+        
+        // También activar con click en todo el placeholder
+        placeholder.addEventListener('click', () => {
+            playBtn.click();
+        });
+    }
+});
