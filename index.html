@@ -48,6 +48,14 @@
         .gallery-placeholder span {
             font-size: 4rem;
         }
+        
+        /* Fix para card-5 */
+        .card-5 {
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 2s;
+        }
     </style>
 </head>
 <body>
@@ -177,7 +185,6 @@
             <div class="about-grid">
                 <div class="about-image-wrapper">
                     <div class="about-image">
-                        <!-- Placeholder con gradiente hasta que agregues tu foto -->
                         <div class="image-placeholder">
                             <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="100" cy="70" r="35" fill="url(#gradient1)"/>
@@ -258,7 +265,7 @@
                 </h2>
             </div>
             
-            <!-- ✅ PROYECTO 1: Ciudad Firewall (CON VIDEO DE YOUTUBE) -->
+            <!-- PROYECTO 1: Ciudad Firewall -->
             <div class="project-card featured">
                 <div class="project-number">01</div>
                 <div class="project-badge">🏆 Ganador Nacional</div>
@@ -291,10 +298,8 @@
                         </div>
                     </div>
                     
-                    <!-- 🎥 AQUÍ ESTÁ EL VIDEO DE YOUTUBE CON PLACEHOLDER -->
                     <div class="project-media">
                         <div class="media-wrapper video-container" data-video-id="Z4SIJabLTMI">
-                            <!-- Placeholder con botón de play -->
                             <div class="video-placeholder active">
                                 <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
                                     <circle cx="40" cy="40" r="30" stroke="url(#grad2)" stroke-width="2"/>
@@ -311,11 +316,10 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M8 5L19 12L8 19V5Z" fill="currentColor"/>
                                     </svg>
-                                    Ver Demo
+                                    Ver Prueba
                                 </button>
                             </div>
                             
-                            <!-- iframe de YouTube (oculto inicialmente) -->
                             <iframe 
                                 class="youtube-iframe" 
                                 src="" 
@@ -330,7 +334,7 @@
                 </div>
             </div>
             
-            <!-- ✅ PROYECTO 2: Campaña Digital (CON VIDEO DE YOUTUBE) -->
+            <!-- PROYECTO 2: Diseño UX/UI -->
             <div class="project-card">
                 <div class="project-number">02</div>
                 
@@ -361,7 +365,6 @@
                         </div>
                     </div>
                     
-                    <!-- 🎥 VIDEO DE YOUTUBE CON PLACEHOLDER -->
                     <div class="project-media">
                         <div class="media-wrapper video-container" data-video-id="lPYFONVOuEc">
                             <div class="video-placeholder active">
@@ -398,7 +401,7 @@
                 </div>
             </div>
             
-            <!-- 🗂️ PROYECTO 3: Portfolio General en Google Drive -->
+            <!-- PROYECTO 3: Portfolio General -->
             <div class="project-card">
                 <div class="project-number">03</div>
                 
@@ -429,12 +432,10 @@
                         </div>
                     </div>
                     
-                    <!-- 🗂️ ICONO DE GOOGLE DRIVE -->
                     <div class="project-media">
                         <div class="media-wrapper drive-container">
                             <div class="drive-placeholder">
                                 <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                    <!-- Google Drive Icon Styled -->
                                     <path d="M40 25L60 58L80 25H40Z" fill="url(#grad4a)" opacity="0.9"/>
                                     <path d="M20 95L40 62L20 29L40 62H80L60 95H20Z" fill="url(#grad4b)" opacity="0.9"/>
                                     <path d="M80 62L100 29L80 62L100 95H60L80 62Z" fill="url(#grad4c)" opacity="0.9"/>
@@ -565,7 +566,6 @@
             </div>
             
             <div class="gallery-grid">
-                <!-- Branding - Google Drive -->
                 <a href="https://drive.google.com/drive/folders/1_hHYOW8vO36mAu9XmhL0zgDCLUiwQfVq?usp=sharing" target="_blank" class="gallery-item" data-category="branding">
                     <div class="gallery-placeholder">
                         <span>🎨</span>
@@ -577,7 +577,6 @@
                     </div>
                 </a>
                 
-                <!-- UI Design - Google Drive -->
                 <a href="https://drive.google.com/drive/folders/1OKXdYaw0K3lUIalJs7Zsh7IWQ1hszhCB?usp=sharing" target="_blank" class="gallery-item" data-category="ui">
                     <div class="gallery-placeholder">
                         <span>📱</span>
@@ -589,7 +588,6 @@
                     </div>
                 </a>
                 
-                <!-- Social Media - Google Drive -->
                 <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing" target="_blank" class="gallery-item" data-category="social">
                     <div class="gallery-placeholder">
                         <span>📸</span>
@@ -601,7 +599,6 @@
                     </div>
                 </a>
                 
-                <!-- Branding 2 - Google Drive -->
                 <a href="https://drive.google.com/drive/folders/1_hHYOW8vO36mAu9XmhL0zgDCLUiwQfVq?usp=sharing" target="_blank" class="gallery-item" data-category="branding">
                     <div class="gallery-placeholder">
                         <span>✨</span>
@@ -613,7 +610,6 @@
                     </div>
                 </a>
                 
-                <!-- UI Design 2 - Google Drive -->
                 <a href="https://drive.google.com/drive/folders/1OKXdYaw0K3lUIalJs7Zsh7IWQ1hszhCB?usp=sharing" target="_blank" class="gallery-item" data-category="ui">
                     <div class="gallery-placeholder">
                         <span>💻</span>
@@ -625,7 +621,6 @@
                     </div>
                 </a>
                 
-                <!-- Social Media 2 - Google Drive -->
                 <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing" target="_blank" class="gallery-item" data-category="social">
                     <div class="gallery-placeholder">
                         <span>🎥</span>
