@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeanfranco Velasquez — Video Editing, Social Media, Community Management, Branding & Web Development Portfolio.">
+    <title>Video &amp; Web — Jeanfranco Velasquez</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body class="loading">
+
+    <!-- Page Transition Curtain -->
+    <div class="curtain" id="curtain" aria-hidden="true">
+        <div class="curtain-panel"></div>
+        <div class="curtain-panel"></div>
+        <div class="curtain-panel"></div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">JV</div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Noise Layer -->
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo page-link">
+                <span class="logo-glyph">JV</span>
+            </a>
+            <div class="nav-links">
+                <a href="design.html" class="nav-link page-link">
+                    <sup>01</sup>Graphic Design
+                </a>
+                <a href="editor.html" class="nav-link active page-link">
+                    <sup>02</sup>Video &amp; Web
+                </a>
+            </div>
+            <div class="nav-end">
+                <a href="mailto:jeanvelaslarez@gmail.com" class="nav-contact">Contact</a>
+                <button class="nav-burger" id="navBurger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="nav-drawer" id="navDrawer">
+            <a href="index.html" class="drawer-link page-link">Home</a>
+            <a href="design.html" class="drawer-link page-link">Graphic Design</a>
+            <a href="editor.html" class="drawer-link page-link">Video &amp; Web</a>
+            <a href="mailto:jeanvelaslarez@gmail.com" class="drawer-link">Contact</a>
+            <div class="drawer-foot">
+                <a href="https://linkedin.com/in/jeanfrancovl" target="_blank" rel="noopener">LI</a>
+                <a href="https://behance.net/jeanfrancovl" target="_blank" rel="noopener">Be</a>
+                <a href="https://instagram.com/jeanfrancovl" target="_blank" rel="noopener">IG</a>
+                <a href="https://github.com/JeanfrancoVL" target="_blank" rel="noopener">GH</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==============================
+         PAGE HERO
+    ============================== -->
+    <header class="page-hero" id="hero">
+        <div class="page-hero-bg">
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        </div>
+        <div class="page-hero-body">
+            <div class="page-hero-label fade-in-up">
+                <span class="sec-num">02</span>
+                <span>Portfolio Section</span>
+            </div>
+            <h1 class="page-hero-title">
+                <span class="clip-reveal">Video &amp; Web</span>
+                <em class="clip-reveal">Development</em>
+            </h1>
+            <p class="page-hero-sub fade-in-up">
+                Video editing, social media strategy, community management, branding, and web development — the full digital production stack.
+            </p>
+        </div>
+        <div class="page-hero-back fade-in-up">
+            <a href="index.html" class="back-link page-link">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M5 12L11 18M5 12L11 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Lobby
+            </a>
+        </div>
+
+        <!-- Hero service pills -->
+        <div class="hero-pills fade-in-up">
+            <div class="pill">Video Editing</div>
+            <div class="pill">Social Media</div>
+            <div class="pill">Community</div>
+            <div class="pill">Branding</div>
+            <div class="pill">Web Dev</div>
+        </div>
+    </header>
+
+    <!-- ==============================
+         SERVICE TABS
+    ============================== -->
+    <div class="tab-bar" id="tabBar">
+        <button class="tab-btn active" data-tab="video">Video Editing</button>
+        <button class="tab-btn" data-tab="social">Social Media</button>
+        <button class="tab-btn" data-tab="community">Community</button>
+        <button class="tab-btn" data-tab="branding">Branding</button>
+        <button class="tab-btn" data-tab="web">Web Dev</button>
+    </div>
+
+    <!-- ==============================
+         VIDEO EDITING SECTION
+    ============================== -->
+    <section class="service-section" id="video" data-tab-section="video">
+        <div class="service-inner">
+            <div class="service-header">
+                <div class="sh-left">
+                    <span class="sec-num">01</span>
+                    <div>
+                        <h2 class="service-title clip-reveal-js">Video<br><em>Editing</em></h2>
+                        <p class="service-desc fade-in-up">Cinematic storytelling, short-form content, and long-form productions edited with rhythm and intention. From raw footage to polished final cut — every frame matters.</p>
+                    </div>
+                </div>
+                <div class="sh-right fade-in-up">
+                    <div class="service-stat">
+                        <div class="ss-n">50+</div>
+                        <div class="ss-l">Videos Produced</div>
+                    </div>
+                    <div class="service-stat">
+                        <div class="ss-n">3+</div>
+                        <div class="ss-l">Years Editing</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video showcase grid -->
+            <div class="video-grid">
+                <!-- Main featured video -->
+                <div class="video-featured fade-in-up">
+                    <div class="video-container" id="mainVideoContainer">
+                        <div class="video-placeholder" id="mainPlaceholder">
+                            <div class="vp-content">
+                                <div class="vp-icon">
+                                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1"/>
+                                        <path d="M24 20L44 30L24 40V20Z" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <p class="vp-title">Featured Video Reel</p>
+                                <p class="vp-sub">Click to load video from Google Drive</p>
+                                <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                                   target="_blank" rel="noopener" class="vp-btn">
+                                    Open in Drive
+                                    <svg viewBox="0 0 20 20" fill="none" width="16" height="16">
+                                        <path d="M5 10H15M15 10L10 5M15 10L10 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <div class="vi-label">Featured</div>
+                        <h3 class="vi-title">Short-Form Video Reel 2024</h3>
+                        <p class="vi-desc">Curated showcase of reels, short-form content, brand campaigns, and event coverage edited in Premiere Pro &amp; After Effects.</p>
+                    </div>
+                </div>
+
+                <!-- Side video list -->
+                <div class="video-list">
+                    <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                       target="_blank" rel="noopener" class="video-item fade-in-up">
+                        <div class="vi-thumb vt-1">
+                            <div class="vt-play">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4l14 8-14 8V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="vi-meta">
+                            <span class="vi-cat">Reel</span>
+                            <span class="vi-name">Brand Campaign</span>
+                        </div>
+                        <div class="vi-ext">
+                            <svg viewBox="0 0 16 16" fill="none" width="14">
+                                <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                       target="_blank" rel="noopener" class="video-item fade-in-up">
+                        <div class="vi-thumb vt-2">
+                            <div class="vt-play">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4l14 8-14 8V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="vi-meta">
+                            <span class="vi-cat">Event Coverage</span>
+                            <span class="vi-name">Corporate Event 2024</span>
+                        </div>
+                        <div class="vi-ext">
+                            <svg viewBox="0 0 16 16" fill="none" width="14">
+                                <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                       target="_blank" rel="noopener" class="video-item fade-in-up">
+                        <div class="vi-thumb vt-3">
+                            <div class="vt-play">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4l14 8-14 8V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="vi-meta">
+                            <span class="vi-cat">Social Content</span>
+                            <span class="vi-name">Instagram Reels Pack</span>
+                        </div>
+                        <div class="vi-ext">
+                            <svg viewBox="0 0 16 16" fill="none" width="14">
+                                <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                       target="_blank" rel="noopener" class="video-item fade-in-up">
+                        <div class="vi-thumb vt-4">
+                            <div class="vt-play">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 4l14 8-14 8V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="vi-meta">
+                            <span class="vi-cat">Motion Graphics</span>
+                            <span class="vi-name">After Effects Animations</span>
+                        </div>
+                        <div class="vi-ext">
+                            <svg viewBox="0 0 16 16" fill="none" width="14">
+                                <path d="M3 8h10M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tools used -->
+            <div class="tools-row fade-in-up">
+                <span class="tools-label">Tools</span>
+                <div class="tools-list">
+                    <div class="tool-chip">Premiere Pro</div>
+                    <div class="tool-chip">After Effects</div>
+                    <div class="tool-chip">DaVinci Resolve</div>
+                    <div class="tool-chip">CapCut</div>
+                    <div class="tool-chip">Audition</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==============================
+         SOCIAL MEDIA SECTION
+    ============================== -->
+    <section class="service-section" id="social" data-tab-section="social">
+        <div class="service-inner">
+            <div class="service-header">
+                <div class="sh-left">
+                    <span class="sec-num">02</span>
+                    <div>
+                        <h2 class="service-title clip-reveal-js">Social<br><em>Media</em></h2>
+                        <p class="service-desc fade-in-up">Full-cycle social media management — content strategy, calendar planning, copywriting, visual content creation, analytics, and growth. From 0 to audience, from presence to impact.</p>
+                    </div>
+                </div>
+                <div class="sh-right fade-in-up">
+                    <div class="service-stat">
+                        <div class="ss-n">95%</div>
+                        <div class="ss-l">Client Satisfaction</div>
+                    </div>
+                    <div class="service-stat">
+                        <div class="ss-n">10+</div>
+                        <div class="ss-l">Brands Managed</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capabilities list -->
+            <div class="capabilities-grid fade-in-up">
+                <div class="cap-card">
+                    <div class="cap-num">01</div>
+                    <h3 class="cap-title">Content Strategy</h3>
+                    <p class="cap-desc">Monthly content calendars, pillar planning, tone-of-voice guidelines, and competitive analysis tailored to your brand.</p>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-num">02</div>
+                    <h3 class="cap-title">Visual Content</h3>
+                    <p class="cap-desc">Posts, stories, carousels, reels — designed and produced in-house with brand-consistent visuals that perform.</p>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-num">03</div>
+                    <h3 class="cap-title">Copywriting</h3>
+                    <p class="cap-desc">Platform-native captions, hashtag research, and compelling copy that drives engagement and builds community.</p>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-num">04</div>
+                    <h3 class="cap-title">Analytics &amp; Growth</h3>
+                    <p class="cap-desc">Monthly performance reports, A/B testing, algorithm-informed posting, and data-backed growth strategy.</p>
+                </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="platforms-row fade-in-up">
+                <span class="tools-label">Platforms</span>
+                <div class="tools-list">
+                    <div class="tool-chip">Instagram</div>
+                    <div class="tool-chip">TikTok</div>
+                    <div class="tool-chip">LinkedIn</div>
+                    <div class="tool-chip">Facebook</div>
+                    <div class="tool-chip">YouTube</div>
+                    <div class="tool-chip">X / Twitter</div>
+                </div>
+            </div>
+
+            <!-- Social gallery -->
+            <div class="social-gallery fade-in-up">
+                <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                   target="_blank" rel="noopener" class="sg-item sg-1">
+                    <div class="sg-content">
+                        <div class="sg-cat">Instagram</div>
+                        <div class="sg-name">Carousel Posts</div>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                   target="_blank" rel="noopener" class="sg-item sg-2">
+                    <div class="sg-content">
+                        <div class="sg-cat">TikTok</div>
+                        <div class="sg-name">Short-Form Video</div>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                   target="_blank" rel="noopener" class="sg-item sg-3">
+                    <div class="sg-content">
+                        <div class="sg-cat">LinkedIn</div>
+                        <div class="sg-name">Brand Content</div>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1wXzmCF7k3D2zRpFt8MFCbxwUrHpdfmCv?usp=sharing"
+                   target="_blank" rel="noopener" class="sg-item sg-4">
+                    <div class="sg-content">
+                        <div class="sg-cat">Strategy</div>
+                        <div class="sg-name">Content Calendars</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==============================
+         COMMUNITY MANAGEMENT
+    ============================== -->
+    <section class="service-section" id="community" data-tab-section="community">
+        <div class="service-inner">
+            <div class="service-header">
+                <div class="sh-left">
+                    <span class="sec-num">03</span>
+                    <div>
+                        <h2 class="service-title clip-reveal-js">Community<br><em>Management</em></h2>
+                        <p class="service-desc fade-in-up">Building and nurturing brand communities across Discord, Slack, and social platforms. Moderation, engagement, events, and authentic human connection at scale.</p>
+                    </div>
+                </div>
+                <div class="sh-right fade-in-up">
+                    <div class="service-stat">
+                        <div class="ss-n">5+</div>
+                        <div class="ss-l">Communities Managed</div>
+                    </div>
+                    <div class="service-stat">
+                        <div class="ss-n">24h</div>
+                        <div class="ss-l">Response Coverage</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="community-layout">
+                <div class="comm-left fade-in-up">
+                    <div class="process-list">
+                        <div class="process-item">
+                            <div class="pi-marker">01</div>
+                            <div class="pi-body">
+                                <h4>Onboarding &amp; Setup</h4>
+                                <p>Server structure, channel architecture, bots, roles, and welcome flows designed for growth and retention.</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="pi-marker">02</div>
+                            <div class="pi-body">
+                                <h4>Daily Moderation</h4>
+                                <p>Active moderation, rule enforcement, conflict resolution, and maintaining a safe, positive environment.</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="pi-marker">03</div>
+                            <div class="pi-body">
+                                <h4>Engagement Programs</h4>
+                                <p>AMA sessions, events, challenges, giveaways, and member spotlights that keep communities alive and growing.</p>
+                            </div>
+                        </div>
+                        <div class="process-item">
+                            <div class="pi-marker">04</div>
+                            <div class="pi-body">
+                                <h4>Reporting &amp; Insights</h4>
+                                <p>Weekly engagement reports, growth metrics, sentiment analysis, and strategic recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comm-right fade-in-up">
+                    <div class="comm-visual">
+                        <div class="discord-mock">
+                            <div class="dm-sidebar">
+                                <div class="dm-ch active"># general</div>
+                                <div class="dm-ch"># announcements</div>
+                                <div class="dm-ch"># introductions</div>
+                                <div class="dm-ch"># events</div>
+                                <div class="dm-ch"># feedback</div>
+                            </div>
+                            <div class="dm-content">
+                                <div class="dm-msg">
+                                    <div class="dm-avatar"></div>
+                                    <div class="dm-body">
+                                        <div class="dm-name">Community Manager</div>
+                                        <div class="dm-text">Welcome to the server! Check the #rules channel to get started.</div>
+                                    </div>
+                                </div>
+                                <div class="dm-msg">
+                                    <div class="dm-avatar dm-av-2"></div>
+                                    <div class="dm-body">
+                                        <div class="dm-name">New Member</div>
+                                        <div class="dm-text">Thanks! Excited to be here.</div>
+                                    </div>
+                                </div>
+                                <div class="dm-input">
+                                    <div class="dm-input-bar">Message #general</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-row fade-in-up">
+                <span class="tools-label">Platforms</span>
+                <div class="tools-list">
+                    <div class="tool-chip">Discord</div>
+                    <div class="tool-chip">Slack</div>
+                    <div class="tool-chip">Telegram</div>
+                    <div class="tool-chip">Reddit</div>
+                    <div class="tool-chip">WhatsApp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==============================
+         BRANDING
+    ============================== -->
+    <section class="service-section" id="branding" data-tab-section="branding">
+        <div class="service-inner">
+            <div class="service-header">
+                <div class="sh-left">
+                    <span class="sec-num">04</span>
+                    <div>
+                        <h2 class="service-title clip-reveal-js">Brand<br><em>Strategy</em></h2>
+                        <p class="service-desc fade-in-up">Complete brand development from naming and positioning through visual identity and brand guidelines. Strategy and craft in one place.</p>
+                    </div>
+                </div>
+                <div class="sh-right fade-in-up">
+                    <div class="service-stat">
+                        <div class="ss-n">20+</div>
+                        <div class="ss-l">Brands Created</div>
+                    </div>
+                    <div class="service-stat">
+                        <div class="ss-n">90%</div>
+                        <div class="ss-l">Approval Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="branding-showcase fade-in-up">
+                <div class="brand-process">
+                    <div class="bp-step">
+                        <span class="bp-n">Discovery</span>
+                        <p>Brand audit, market research, competitive landscape, and stakeholder interviews to find the white space.</p>
+                    </div>
+                    <div class="bp-arrow">
+                        <svg viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 8H28M22 2l6 6-6 6" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="bp-step">
+                        <span class="bp-n">Strategy</span>
+                        <p>Brand platform, positioning statement, tone of voice, and messaging architecture.</p>
+                    </div>
+                    <div class="bp-arrow">
+                        <svg viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 8H28M22 2l6 6-6 6" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="bp-step">
+                        <span class="bp-n">Identity</span>
+                        <p>Logo system, color palette, typography, graphic language, and all visual assets.</p>
+                    </div>
+                    <div class="bp-arrow">
+                        <svg viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 8H28M22 2l6 6-6 6" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="bp-step">
+                        <span class="bp-n">Guidelines</span>
+                        <p>Brand book, usage rules, templates, and implementation support across all touchpoints.</p>
+                    </div>
+                </div>
+
+                <a href="https://drive.google.com/drive/folders/1_hHYOW8vO36mAu9XmhL0zgDCLUiwQfVq?usp=sharing"
+                   target="_blank" rel="noopener" class="brand-drive-link">
+                    View Branding Portfolio in Drive
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==============================
+         WEB DEVELOPMENT
+    ============================== -->
+    <section class="service-section" id="web" data-tab-section="web">
+        <div class="service-inner">
+            <div class="service-header">
+                <div class="sh-left">
+                    <span class="sec-num">05</span>
+                    <div>
+                        <h2 class="service-title clip-reveal-js">Web<br><em>Development</em></h2>
+                        <p class="service-desc fade-in-up">Handcrafted websites and web applications built with clean code and purposeful design. Performance, accessibility, and aesthetic quality — never traded off against each other.</p>
+                    </div>
+                </div>
+                <div class="sh-right fade-in-up">
+                    <div class="service-stat">
+                        <div class="ss-n">10+</div>
+                        <div class="ss-l">Sites Launched</div>
+                    </div>
+                    <div class="service-stat">
+                        <div class="ss-n">100%</div>
+                        <div class="ss-l">Responsive</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="web-projects">
+
+                <!-- Project card: This Portfolio -->
+                <div class="web-card fade-in-up">
+                    <div class="wc-visual wv-1">
+                        <div class="code-preview">
+                            <div class="code-line cl-comment">/* Portfolio System */</div>
+                            <div class="code-line"><span class="cl-selector">.hero-name</span> {</div>
+                            <div class="code-line cl-indent"><span class="cl-prop">font-family</span>: <span class="cl-val">Cormorant Garamond</span>;</div>
+                            <div class="code-line cl-indent"><span class="cl-prop">font-size</span>: <span class="cl-val">13rem</span>;</div>
+                            <div class="code-line cl-indent"><span class="cl-prop">color</span>: <span class="cl-val">#C4A265</span>;</div>
+                            <div class="code-line">}</div>
+                        </div>
+                    </div>
+                    <div class="wc-info">
+                        <div class="wc-cat">Portfolio — 2025</div>
+                        <h3 class="wc-title">Personal Portfolio System</h3>
+                        <p class="wc-desc">Three-page portfolio with animated transitions, canvas backgrounds, scroll-driven animations, and GitHub Pages deployment. Built with pure HTML, CSS &amp; JS — zero frameworks.</p>
+                        <div class="wc-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Canvas API</span>
+                        </div>
+                        <a href="https://github.com/JeanfrancoVL" target="_blank" rel="noopener" class="wc-link">
+                            View on GitHub
+                            <svg viewBox="0 0 24 24" fill="none" width="16">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project card: Landing Page -->
+                <div class="web-card fade-in-up">
+                    <div class="wc-visual wv-2">
+                        <div class="browser-mock">
+                            <div class="bm-bar">
+                                <div class="bm-dots"><i></i><i></i><i></i></div>
+                                <div class="bm-url">jeanfrancovl.github.io</div>
+                            </div>
+                            <div class="bm-body">
+                                <div class="bm-hero-block"></div>
+                                <div class="bm-grid">
+                                    <div class="bm-card"></div>
+                                    <div class="bm-card"></div>
+                                    <div class="bm-card"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wc-info">
+                        <div class="wc-cat">Landing Page — 2024</div>
+                        <h3 class="wc-title">Brand Landing Pages</h3>
+                        <p class="wc-desc">High-converting landing pages for brands and campaigns — designed and developed end-to-end. Mobile-first, fast-loading, and pixel-perfect across all devices.</p>
+                        <div class="wc-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1OKXdYaw0K3lUIalJs7Zsh7IWQ1hszhCB?usp=sharing"
+                           target="_blank" rel="noopener" class="wc-link">
+                            View in Drive
+                            <svg viewBox="0 0 24 24" fill="none" width="16">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tech stack -->
+            <div class="techstack-row fade-in-up">
+                <span class="tools-label">Stack</span>
+                <div class="tools-list">
+                    <div class="tool-chip">HTML5</div>
+                    <div class="tool-chip">CSS3</div>
+                    <div class="tool-chip">JavaScript</div>
+                    <div class="tool-chip">React (learning)</div>
+                    <div class="tool-chip">GitHub Pages</div>
+                    <div class="tool-chip">Figma</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================
+         CROSS-NAV
+    ============================== -->
+    <section class="cross-nav">
+        <a href="design.html" class="cross-link page-link">
+            <div class="cross-label">Previous Section</div>
+            <div class="cross-title">
+                <svg viewBox="0 0 32 32" fill="none" style="width:28px;height:28px;flex-shrink:0">
+                    <path d="M26 16H6M6 16L14 8M6 16L14 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Graphic Design<span class="cross-num">01</span>
+            </div>
+        </a>
+        <div class="cross-contact fade-in-up">
+            <p>Ready to work together?</p>
+            <a href="mailto:jeanvelaslarez@gmail.com" class="cross-email">
+                jeanvelaslarez@gmail.com
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo">JV</span>
+                <span class="footer-copy">&copy; 2025 Jeanfranco Velasquez</span>
+            </div>
+            <div class="footer-center">
+                <a href="index.html" class="page-link">Home</a>
+                <a href="design.html" class="page-link">Graphic Design</a>
+            </div>
+            <div class="footer-right">
+                <a href="https://linkedin.com/in/jeanfrancovl" target="_blank" rel="noopener">LI</a>
+                <a href="https://behance.net/jeanfrancovl" target="_blank" rel="noopener">Be</a>
+                <a href="https://instagram.com/jeanfrancovl" target="_blank" rel="noopener">IG</a>
+                <a href="https://github.com/JeanfrancoVL" target="_blank" rel="noopener">GH</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="editor.js"></script>
+</body>
+</html>
