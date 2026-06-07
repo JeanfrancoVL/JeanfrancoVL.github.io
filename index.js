@@ -23,46 +23,7 @@ const mob = () => window.innerWidth < 768 || !window.matchMedia('(hover:hover)')
   }
 })();
 
-/* ——— CURTAIN TRANSITIONS ——— */
-(function initCurtain() {
-  const curtain = $('#curtain');
-  if (!curtain) return;
-  const panels = curtain.querySelectorAll('.curtain-panel');
 
-  function sweepOut() {
-    panels.forEach((p, i) => {
-      p.style.cssText = 'transform:translateY(0);transition:none';
-    });
-    curtain.classList.add('active');
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      panels.forEach((p, i) => {
-        p.style.cssText = '';
-        p.style.transitionDelay = (i * 65) + 'ms';
-        p.style.transform = 'translateY(100%)';
-      });
-      setTimeout(() => curtain.classList.remove('active'), 900);
-    }));
-  }
-
-  if (sessionStorage.getItem('jv_nav')) {
-    sessionStorage.removeItem('jv_nav');
-    sweepOut();
-  }
-
-  $$('.page-link').forEach(a => {
-    a.addEventListener('click', e => {
-      const href = a.getAttribute('href');
-      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
-      e.preventDefault();
-      panels.forEach((p, i) => {
-        p.style.transitionDelay = (i * 65) + 'ms';
-      });
-      curtain.classList.add('active');
-      sessionStorage.setItem('jv_nav', '1');
-      setTimeout(() => { window.location.href = href; }, 720);
-    });
-  });
-})();
 
 /* ——— CANVAS — visible gradient orbs that actually show ——— */
 (function initCanvas() {
