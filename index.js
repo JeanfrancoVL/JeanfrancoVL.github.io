@@ -25,59 +25,6 @@ const mob = () => window.innerWidth < 768 || !window.matchMedia('(hover:hover)')
 
 
 
-/* ——— CANVAS — visible gradient orbs that actually show ——— */
-(function initCanvas() {
-  const canvas = $('#heroCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let W, H, t = 0, raf;
-
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = canvas.parentElement.offsetHeight || window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
-
-  // Orbs with strong, visible colors
-  const orbs = [
-    // Top-left deep purple glow
-    { bx:.10, by:.20, rx:.09, ry:.07, r:.60, c:[90,38,220], a:.70 },
-    // CENTER — covers where text lives (50% height)
-    { bx:.38, by:.50, rx:.09, ry:.10, r:.55, c:[68,24,192], a:.60 },
-    // Right warm gold
-    { bx:.82, by:.58, rx:.08, ry:.09, r:.50, c:[196,162,101], a:.40 },
-    // Top center saturated purple
-    { bx:.54, by:.06, rx:.07, ry:.06, r:.44, c:[58,18,148], a:.50 },
-    // Bottom-left faint gold
-    { bx:.05, by:.82, rx:.08, ry:.07, r:.38, c:[196,162,101], a:.22 },
-    // Upper-right accent
-    { bx:.88, by:.18, rx:.06, ry:.08, r:.36, c:[78,30,180], a:.44 },
-  ];
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    const spd = t * .0008;
-    orbs.forEach((o, i) => {
-      const cx = (o.bx + Math.sin(spd + i * 1.3) * o.rx) * W;
-      const cy = (o.by + Math.cos(spd + i * 0.9) * o.ry) * H;
-      const r  = o.r * Math.max(W, H);
-      const g  = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
-      const [R, G, B] = o.c;
-      g.addColorStop(0,   `rgba(${R},${G},${B},${o.a})`);
-      g.addColorStop(.5,  `rgba(${R},${G},${B},${o.a * .4})`);
-      g.addColorStop(1,   `rgba(${R},${G},${B},0)`);
-      ctx.fillStyle = g;
-      ctx.fillRect(0, 0, W, H);
-    });
-    t++;
-    raf = requestAnimationFrame(draw);
-  }
-  draw();
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) cancelAnimationFrame(raf); else draw();
-  });
-})();
 
 /* ——— CURSOR ——— */
 (function initCursor() {
